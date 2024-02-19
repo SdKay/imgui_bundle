@@ -104,7 +104,7 @@ if(NOT IMGUI_BUNDLE_DISABLE_IMFILEDIALOG)
         add_additional_sources_to_external_library(im_file_dialog ImFileDialog bundle_integration)
         target_include_directories(im_file_dialog PRIVATE hello_imgui/hello_imgui/src/hello_imgui/internal)
         target_include_directories(im_file_dialog PRIVATE imgui)
-        target_link_libraries(im_file_dialog PRIVATE hello_imgui)
+        target_link_libraries(im_file_dialog PRIVATE hello_imgui pthread)
 
         target_compile_definitions(imgui_bundle INTERFACE IMGUI_BUNDLE_WITH_IMFILEDIALOG)
         set(IMGUI_BUNDLE_WITH_IMFILEDIALOG ON CACHE INTERNAL "" FORCE)
