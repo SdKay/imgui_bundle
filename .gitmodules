@@ -1,7 +1,7 @@
 [submodule "external/imgui/imgui"]
 	path = external/imgui/imgui
-	url = https://github.com/pthom/imgui.git
-	branch = imgui_bundle
+	url = git@github.com:SdKay/imgui.git
+	branch = docking
 [submodule "external/glfw/glfw"]
 	path = external/glfw/glfw
 	url = https://github.com/glfw/glfw.git
