@@ -92,6 +92,7 @@ if (IMGUI_BUNDLE_WITH_IMMVISION)
     add_subdirectory(demos_immvision)
 endif()
 add_subdirectory(sandbox)
+add_subdirectory(movex_tool)
 
 add_this_folder_auto_demos()
 add_this_folder_as_demos_library()
