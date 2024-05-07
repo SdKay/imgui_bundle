@@ -13,10 +13,10 @@ using uint = unsigned int;
 using uchar = unsigned char;
 
 // Manual declaration of imgui_demo.cpp API
-void SetImGuiDemoWindowPos(ImVec2 pos, ImVec2 size, ImGuiCond cond);
-void SetImGuiDemoCodeWindowPos(ImVec2 pos, ImVec2 size, ImGuiCond cond);
+// void SetImGuiDemoWindowPos(ImVec2 pos, ImVec2 size, ImGuiCond cond);
+// void SetImGuiDemoCodeWindowPos(ImVec2 pos, ImVec2 size, ImGuiCond cond);
 void ImGuiDemoSetShowPythonCode(bool showPythonCode);
-extern bool GImGuiDemoMarker_IsActive;
+// extern bool GImGuiDemoMarker_IsActive;
 
 
 namespace py = pybind11;
@@ -6680,14 +6680,14 @@ void py_init_module_imgui_main(py::module& m)
     });
 
     // API for imgui_demo
-    m.def("set_imgui_demo_window_pos", SetImGuiDemoWindowPos);
-    m.def("set_imgui_demo_code_window_pos", SetImGuiDemoCodeWindowPos);
-    m.def("set_imgui_demo_marker_is_active", [](bool b) {
-        GImGuiDemoMarker_IsActive = b;
-    });
-    m.def("get_imgui_demo_marker_is_active", []() {
-        return GImGuiDemoMarker_IsActive;
-    });
+    // m.def("set_imgui_demo_window_pos", SetImGuiDemoWindowPos);
+    // m.def("set_imgui_demo_code_window_pos", SetImGuiDemoCodeWindowPos);
+    // m.def("set_imgui_demo_marker_is_active", [](bool b) {
+    //     GImGuiDemoMarker_IsActive = b;
+    // });
+    // m.def("get_imgui_demo_marker_is_active", []() {
+    //     return GImGuiDemoMarker_IsActive;
+    // });
     m.def("set_imgui_demo_show_python_code", ImGuiDemoSetShowPythonCode);
 
 }

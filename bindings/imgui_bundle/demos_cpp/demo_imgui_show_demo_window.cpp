@@ -5,7 +5,7 @@
 
 void SetImGuiDemoWindowPos(ImVec2 pos, ImVec2 size, ImGuiCond cond);
 void SetImGuiDemoCodeWindowPos(ImVec2 pos, ImVec2 size, ImGuiCond cond);
-extern bool GImGuiDemoMarker_IsActive;
+// extern bool GImGuiDemoMarker_IsActive;
 
 void demo_imgui_show_demo_window()
 {
@@ -24,13 +24,13 @@ void demo_imgui_show_demo_window()
     static bool flagDemoCodeOpened = false;
     if (!flagDemoCodeOpened)
     {
-        GImGuiDemoMarker_IsActive = true;
+        // GImGuiDemoMarker_IsActive = true;
         flagDemoCodeOpened = true;
     }
     ImVec2 windowSize(ImGui::GetContentRegionAvail().x / 2., ImGui::GetContentRegionAvail().y);
-    SetImGuiDemoWindowPos(ImGui::GetCursorScreenPos(), windowSize, ImGuiCond_Appearing);
-    SetImGuiDemoCodeWindowPos(ImVec2(ImGui::GetCursorScreenPos().x + windowSize.x, ImGui::GetCursorScreenPos().y) ,
-                              windowSize, ImGuiCond_Appearing);
+    // SetImGuiDemoWindowPos(ImGui::GetCursorScreenPos(), windowSize, ImGuiCond_Appearing);
+    // SetImGuiDemoCodeWindowPos(ImVec2(ImGui::GetCursorScreenPos().x + windowSize.x, ImGui::GetCursorScreenPos().y) ,
+                              // windowSize, ImGuiCond_Appearing);
     ImGui::ShowDemoWindow();
 
     AnimateLogo("images/logo_imgui_600.png", 2.f, ImVec2(1.f, 4.8f), 0.45f, "https://github.com/ocornut/imgui");
